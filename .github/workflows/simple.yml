@@ -3,7 +3,9 @@ name: Shell Commands
 on: [push]
 
 jobs:
+# nome del job
   run-shell-command:
+  # dove deve girare
     runs-on: ubuntu-latest
     steps:
       - name: echo a string
@@ -20,6 +22,8 @@ jobs:
 
   run-windows-commands:
     runs-on: windows-latest
+    # indica cosa deve essere eseguito prima di poter eseguire questo job
+    needs: ["run-shell-command"]
     steps:
       - name: Directory PowerShell
         run: Get-Location
