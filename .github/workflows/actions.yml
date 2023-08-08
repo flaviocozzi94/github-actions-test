@@ -10,6 +10,12 @@ jobs:
         run: |
           pwd
           ls
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: List Files
+        run: |
+          pwd
+          ls
       - name: Simple JS Action
       # id per usare lo step in altri punti
         id: greet
